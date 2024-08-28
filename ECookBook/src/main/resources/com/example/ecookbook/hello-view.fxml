@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecookbook.HelloController">
+   <top>
+      <HBox prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@stil.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="67.0" prefWidth="233.0" text="E-CookBook" textFill="#ff5056">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Separator maxHeight="-Infinity" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="41.0" prefWidth="2.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Separator>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="290.0" styleClass="round-layout" stylesheets="@stil.css">
+               <HBox.margin>
+                  <Insets top="16.0" />
+               </HBox.margin>
+               <children>
+                  <TextField prefHeight="25.0" prefWidth="245.0" promptText="Search" styleClass="transparent" stylesheets="@stil.css">
+                     <HBox.margin>
+                        <Insets left="7.0" top="2.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="23.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/search.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="4.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Pane>
+            <HBox prefHeight="62.0" prefWidth="203.0">
+               <children>
+                  <Label prefHeight="61.0" prefWidth="129.0" text="  Tugçe Sançı">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="5.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../../images/Tuce.png" />
+                     </image></ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="830.0" prefWidth="233.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="830.0" prefWidth="181.0" spacing="3.0">
+               <children>
+                  <Label prefHeight="61.0" prefWidth="129.0" text="Browse">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="14.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" stylesheets="@stil.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/home.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="40.0" top="4.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label prefHeight="47.0" prefWidth="129.0" text="Home">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="selected" />
+                        <String fx:value="mouse-moved" />
+                     </styleClass>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#labelClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/9295138671579770860-128.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="40.0" top="4.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label onMouseClicked="#labelClicked" prefHeight="55.0" prefWidth="129.0" text="Top Foods">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#categoriesClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/12197255211600002644-128.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="40.0" top="4.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label onMouseClicked="#categoriesClicked" prefHeight="44.0" prefWidth="129.0" text="Categories">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <Label prefHeight="61.0" prefWidth="129.0" text="Your Meals">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="14.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/10274305501591055829-128.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="40.0" top="4.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label prefHeight="55.0" prefWidth="129.0" text="Soon">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#favoritesClicked" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="40.0" top="4.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                           <image>
+                              <Image url="@../../../images/favoritefood.png" />
+                           </image>
+                        </ImageView>
+                        <Label onMouseClicked="#favoritesClicked" prefHeight="47.0" prefWidth="129.0" text="Favorites">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#historyClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/152349923816313443184150-128.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="40.0" top="4.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label onMouseClicked="#historyClicked" prefHeight="44.0" prefWidth="129.0" text="History">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <Label prefHeight="61.0" prefWidth="129.0" text="Cook">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="14.0" />
+                     </padding>
+                  </Label>
+                  <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#whatCookIClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/228043151535698997-128.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="40.0" top="4.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="CLOSED_HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label onMouseClicked="#whatCookIClicked" prefHeight="44.0" prefWidth="161.0" text="What Should I Cook ?">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/settings.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="6.0" left="8.0" top="4.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="59.0" prefWidth="250.0" text="Recent Meals">
+               <font>
+                  <Font name="Berlin Sans FB" size="26.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <ScrollPane maxHeight="-Infinity" prefHeight="250.0" prefWidth="1000.0" styleClass="transparent" stylesheets="@stil.css">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <content>
+                  <HBox fx:id="cardLayout" prefHeight="250.0" prefWidth="1600.0" spacing="15.0" styleClass="transparent" stylesheets="@stil.css">
+                     <opaqueInsets>
+                        <Insets left="1.0" />
+                     </opaqueInsets></HBox>
+               </content>
+            </ScrollPane>
+            <Label prefHeight="92.0" prefWidth="300.0" text="Our Sponsorships" textAlignment="RIGHT">
+               <font>
+                  <Font name="Berlin Sans FB" size="27.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="23.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Label>
+            <Pane prefHeight="418.0" prefWidth="1082.0">
+               <children>
+                  <VBox prefHeight="416.0" prefWidth="1080.0">
+                     <children>
+                        <HBox prefHeight="195.0" prefWidth="1080.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="138.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/burgerKing.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="17.0" right="16.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Burger King" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="pink-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="178.0" prefWidth="145.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="94.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/mcDonald'sLogo.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="12.0" right="7.0" top="27.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="62.0" prefWidth="143.0" text="McDonald's">
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="blue-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="138.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/starbucks.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="9.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label prefHeight="66.0" prefWidth="160.0" text="Starbucks Corporation">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="gray-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="155.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/dunkinDonuts.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Dunkin Donuts" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="roseColour-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="112.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/popeyes.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="2.0" top="18.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Popeyes">
+                                       <VBox.margin>
+                                          <Insets top="24.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="yellow-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="127.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/domino'sPizza.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="15.0" top="15.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Domino's Pizza" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="purple-background" />
+                                 </styleClass>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="195.0" prefWidth="1080.0">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="114.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/pizzaHut.jpg" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="17.0" right="16.0" top="22.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Pizza Hut" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="roseColour-background" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="178.0" prefWidth="145.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="87.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/arbys.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="12.0" right="7.0" top="27.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="93.0" prefWidth="143.0" text="Arby's Restaurant Group">
+                                       <VBox.margin>
+                                          <Insets top="40.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="yellow-background" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="33.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/doyuyo.jpg" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="6.0" top="44.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Doyuyo!">
+                                       <VBox.margin>
+                                          <Insets top="55.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="pink-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="107.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/kahveDunyası.jpg" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="26.0" top="25.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Kahve Dünyası" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="green-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="115.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/bigChefs.jpg" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="25.0" top="19.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Big Chefs" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="blue-background" />
+                                 </styleClass>
+                              </VBox>
+                              <VBox prefHeight="195.0" prefWidth="160.0" stylesheets="@stil.css">
+                                 <children>
+                                    <ImageView fitHeight="111.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/oncuDoner.jpg" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="25.0" top="17.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="66.0" prefWidth="160.0" text="Öncü Döner" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="round-layout" />
+                                    <String fx:value="red-background" />
+                                 </styleClass>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

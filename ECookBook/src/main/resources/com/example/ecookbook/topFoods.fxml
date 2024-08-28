@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ecookbook.topFoodsController">
+    <top>
+        <HBox prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@stil.css" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefHeight="67.0" prefWidth="233.0" text="E-CookBook" textFill="#ff5056">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Label>
+                <Separator maxHeight="-Infinity" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="41.0" prefWidth="2.0">
+                    <HBox.margin>
+                        <Insets top="10.0" />
+                    </HBox.margin>
+                </Separator>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="290.0" styleClass="round-layout" stylesheets="@stil.css">
+                    <HBox.margin>
+                        <Insets top="16.0" />
+                    </HBox.margin>
+                    <children>
+                        <TextField prefHeight="25.0" prefWidth="245.0" promptText="Search" styleClass="transparent" stylesheets="@stil.css">
+                            <HBox.margin>
+                                <Insets left="7.0" top="2.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                        <ImageView fitHeight="23.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/search.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="5.0" top="4.0" />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets></Pane>
+                <HBox prefHeight="62.0" prefWidth="203.0">
+                    <children>
+                        <Label prefHeight="61.0" prefWidth="129.0" text="  Tugçe Sançı">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <HBox.margin>
+                                <Insets left="20.0" right="20.0" top="5.0" />
+                            </HBox.margin>
+                            <image>
+                                <Image url="@../../../images/Tuce.png" />
+                            </image></ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefHeight="830.0" prefWidth="233.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="830.0" prefWidth="181.0" spacing="3.0">
+                    <children>
+                        <Label prefHeight="61.0" prefWidth="129.0" text="Browse">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="14.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" stylesheets="@stil.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#goBackClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/home.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="4.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="CLOSED_HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <Label onMouseClicked="#goBackClicked" prefHeight="47.0" prefWidth="129.0" text="Home">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="14.0" />
+                                    </HBox.margin>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                            <styleClass>
+                                <String fx:value="selected" />
+                                <String fx:value="mouse-moved" />
+                            </styleClass>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/9295138671579770860-128.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="4.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="CLOSED_HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <Label prefHeight="55.0" prefWidth="129.0" text="Top Foods">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="14.0" />
+                                    </HBox.margin>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#categoriesClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/12197255211600002644-128.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="4.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="CLOSED_HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <Label onMouseClicked="#categoriesClicked" prefHeight="44.0" prefWidth="129.0" text="Categories">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="14.0" />
+                                    </HBox.margin>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="61.0" prefWidth="129.0" text="Your Meals">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="14.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/10274305501591055829-128.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="4.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="CLOSED_HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <Label prefHeight="55.0" prefWidth="129.0" text="Soon">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="14.0" />
+                                    </HBox.margin>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#favoritesClicked" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="4.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="CLOSED_HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@../../../images/favoritefood.png" />
+                                    </image>
+                                </ImageView>
+                                <Label onMouseClicked="#favoritesClicked" prefHeight="47.0" prefWidth="129.0" text="Favorites">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="14.0" />
+                                    </HBox.margin>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#historyClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/152349923816313443184150-128.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="4.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="CLOSED_HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <Label onMouseClicked="#historyClicked" prefHeight="44.0" prefWidth="129.0" text="History">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="14.0" />
+                                    </HBox.margin>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Label prefHeight="61.0" prefWidth="129.0" text="Cook">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                            <padding>
+                                <Insets left="14.0" />
+                            </padding>
+                        </Label>
+                        <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0" styleClass="mouse-moved" stylesheets="@stil.css">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="45.0" onMouseClicked="#whatCookIClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/228043151535698997-128.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="4.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="CLOSED_HAND" />
+                                    </cursor>
+                                </ImageView>
+                                <Label onMouseClicked="#whatCookIClicked" prefHeight="44.0" prefWidth="161.0" text="What Should I Cook ?">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                    </children>
+                    <padding>
+                        <Insets top="20.0" />
+                    </padding>
+                </VBox>
+                <HBox maxHeight="-Infinity" prefHeight="55.0" prefWidth="233.0">
+                    <children>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/settings.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets bottom="6.0" left="8.0" top="4.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="611.0" prefWidth="962.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="110.0" prefWidth="1082.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1088.0" stylesheets="@stil.css">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="1122.0" text="Top Foods" textFill="#d37a7a">
+                           <font>
+                              <Font name="Berlin Sans FB" size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="transparent" />
+                     </styleClass>
+                  </HBox>
+               </children>
+            </Pane>
+            <HBox prefHeight="10.0" prefWidth="1082.0">
+               <children>
+                  <Separator prefHeight="50.0" prefWidth="1095.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1088.0">
+               <children>
+                  <Label prefHeight="117.0" prefWidth="26.0" text="1.">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+                  <ImageView fitHeight="78.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/sinemcorbasi.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="335.0" text="Lentil soup" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="163.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="163.0" text="4.9    2.5m Ratings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/artısicon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="175.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1088.0">
+               <children>
+                  <Label prefHeight="117.0" prefWidth="26.0" text="2.">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+                  <ImageView fitHeight="87.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/manti.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="335.0" text="Mantı" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="163.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="163.0" text="4.9    2m Ratings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/artısyok.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="175.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1088.0">
+               <children>
+                  <Label prefHeight="117.0" prefWidth="26.0" text="3.">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+                  <ImageView fitHeight="67.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/sarma.jpeg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="18.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="335.0" text="Sarma" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="163.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="163.0" text="4.8   1.9m Ratings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/azalısicon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="175.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1088.0">
+               <children>
+                  <Label prefHeight="117.0" prefWidth="26.0" text="4.">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+                  <ImageView fitHeight="77.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/etSote.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="335.0" text="Sauteed Meat" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="163.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="163.0" text="4.8    1.5m Ratings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/artısyok.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="175.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1088.0">
+               <children>
+                  <Label prefHeight="117.0" prefWidth="26.0" text="5.">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+                  <ImageView fitHeight="78.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/karniyarik.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="335.0" text="Karnıyarık" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="163.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="163.0" text="4.7    1.5m Ratings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/azalısicon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="175.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1088.0">
+               <children>
+                  <Label prefHeight="117.0" prefWidth="26.0" text="6.">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+                  <ImageView fitHeight="83.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/börülce.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="335.0" text="Green Pea" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="163.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="163.0" text="4.7    1.2m Ratings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/artısicon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="175.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1088.0">
+               <children>
+                  <Label prefHeight="117.0" prefWidth="26.0" text="7.">
+                     <padding>
+                        <Insets left="4.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin></Label>
+                  <ImageView fitHeight="78.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/zeytinyagliEnginar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="335.0" text="Artichoke with olive oil" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="163.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../images/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="100.0" prefWidth="163.0" text="4.6   869k Ratings" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/azalısicon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="175.0" top="25.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children></VBox>
+    </center>
+</BorderPane>

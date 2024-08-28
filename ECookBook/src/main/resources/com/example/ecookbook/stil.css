@@ -1,0 +1,68 @@
+.white-background{
+    -fx-background-color: white;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.round-layout{
+    -fx-border-radius: 50;
+    -fx-border-color: #D7D7D7;
+}
+.selected{
+    -fx-background-color: #F3F3F3;
+}
+.mouse-moved :hover{
+    -fx-background-color: #E4E4E4;
+}
+
+.mouse-moved20 :hover{
+    -fx-background-radius: 20;
+    -fx-background-color: #E4E4E4;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0),10,0,0,10) ;
+}
+
+.yellow-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #FFFF99;
+}
+
+.roseColour-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #40E0D0;
+}
+
+.pink-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #FFD1DC;
+}
+
+.purple-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #BDB2FE;
+}
+
+.blue-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #B9E5FF;
+}
+
+.red-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #FF5733;
+}
+.green-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #228B22;
+}
+
+.gray-background{
+    -fx-background-radius: 50;
+    -fx-background-color: #D3D3D3;
+
+}
+
